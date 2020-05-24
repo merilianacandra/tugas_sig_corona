@@ -25,3 +25,5 @@ Route::post('/search','IndexController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/covid','IndexController@index');
