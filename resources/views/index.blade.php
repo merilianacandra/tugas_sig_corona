@@ -204,7 +204,7 @@
 </div>
 <script src="https://pendataan.baliprov.go.id/assets/frontend/map/leaflet.markercluster-src.js"></script>
 <script type="text/javascript" class="init">
-  
+	
   $(document).ready(function() {
       $('#example').DataTable();
   } );
@@ -322,7 +322,7 @@
           var layers = layer.getLayers()[0].getLayers();
 
             // fetching sub layer
-          layers.forEach(function(layer, index){
+      	  layers.forEach(function(layer, index){
           
           var kab  = layer.feature.properties.NAME_2;
           kab = kab.toUpperCase();
@@ -425,7 +425,7 @@
             layer.setStyle(defStyle);
           }
           layer.bindPopup(data);
-        });
+      	});
         map.addLayer(markers);
         layer.addTo(map);
         }
