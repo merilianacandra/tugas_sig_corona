@@ -22,10 +22,10 @@ class DataController extends Controller
      */
     public function index()
     {
-        $data = Data::select('tb_data.id','tb_data.id_kabupaten','kabupaten','sembuh','rawat','positif','meninggal')
+        $data = Data::select('tb_data.id','id_kabupaten','kabupaten','sembuh','rawat','positif','meninggal')
                 ->join('tb_kabupaten','tb_data.id_kabupaten','=','tb_kabupaten.id')
                 ->get();
-        $test = Data::select('tb_data.id','tb_data.id_kabupaten','kabupaten','sembuh','rawat','positif','meninggal')
+        $test = Data::select('tb_data.id','id_kabupaten','kabupaten','sembuh','rawat','positif','meninggal')
                 ->join('tb_kabupaten','tb_data.id_kabupaten','=','tb_kabupaten.id')
                 ->where('tgl_data', Data::max('tgl_data'))->orderBy('tgl_data','desc')
                 ->get();
